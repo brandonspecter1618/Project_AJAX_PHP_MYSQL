@@ -59,7 +59,7 @@ function phpTest(){
             }
     }
     
-
+    mysqli_close($dbConn);
 }
 
 phpTest();
