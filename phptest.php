@@ -9,17 +9,22 @@ function phpTest(){
     $pass = "22091992";
     $db   = "db_alunos";
 
+    //Conexão Iniciada
     $dbConn = mysqli_connect($host, $user, $pass, $db);
-
+    
+    //Condicionamento De Conexão
         if($dbConn){
             echo("Connection Sucessfully!!!" . "<br>");
         }else{
             echo("Problem Connection!!!");
         }
+    
+    //Variáveis Query de conexão ao DB
     $querySelect = "select * from alunos";    
     $queryInsert = "insert into alunos(nome, email, age) values('$a', '$b', 29)";
     $queryExclude = "delete from alunos where id_aluno = $a";    
     
+    //Condicionamento para ação diante do banco
     if($c == 'mostrar'){
         $dbQuery = mysqli_query($dbConn, $querySelect);
 
